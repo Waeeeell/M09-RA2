@@ -4,19 +4,21 @@ public class Fil extends Thread {
     private int interaciones;
     private int delay;
 
-    public Fil(String nom, int interaciones, int prioridad, int delay, int FOR) {
-        super(nom);
-        this.interaciones = interaciones;
-        this.delay = delay;
-        setPriority(prioridad);
-        this.FOR = FOR;
+    public Fil(String nom, int prioridad, int interaciones,int FOR, int delay) {
+            
+            super(nom);
+            this.interaciones = interaciones;
+            this.delay = delay;
+            
+            setPriority(prioridad);
+            this.FOR = FOR;
     }
 
     @Override
     public void run() {
         for (int i = 1; i <= this.interaciones; i++) {
             if (FOR == 1) {
-                for (int j = 0; j <= 1000; j++) { ((aqui faig la iteració))
+                for (int j = 0; j <= 1000; j++) { //aqui faig la iteració
                     
                 }
             }
@@ -31,5 +33,6 @@ public class Fil extends Thread {
             }
         }
         System.out.println("Acaba el fil " + getName());
+    
     }
 }
